@@ -13,8 +13,13 @@ import android.widget.ListView;
 
 public class ListActivity extends Activity {
 
-	ListView mListView    = null;
-	TweetAdapter mAdapter = null;
+	public static final String TWEETS = "Tweets";
+	
+	private ListView mListView    = null;
+	private TweetAdapter mAdapter = null;
+	private ArrayList<Tweet> mTweets = new ArrayList<Tweet>();
+	
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +28,10 @@ public class ListActivity extends Activity {
 		
 		mListView = (ListView)findViewById(R.id.tweet_listview);
 		
+		mTweets = (ArrayList<Tweet>)getIntent().getSerializableExtra(TWEETS);
+		
 		// Create tweet adapter
-		ArrayList<Tweet> tweets = new ArrayList<Tweet>();
-		tweets.add(new Tweet());
-		tweets.add(new Tweet());
-		tweets.add(new Tweet());
-		mAdapter = new TweetAdapter(this, R.layout.list_item, tweets);
+		mAdapter = new TweetAdapter(this, R.layout.list_item, mTweets);
 		mListView.setAdapter(mAdapter);		
 	}
 

@@ -32,7 +32,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 	       TextView tvAge = (TextView) convertView.findViewById(R.id.tweet_age);
 	       ImageView ivIcon = (ImageView) convertView.findViewById(R.id.tweet_icon);
 	       
-	       tvHandle.setText(tweet.getHandle());
+	       tvHandle.setText(tweet.getScreenName());
 	       tvTweet.setText(tweet.getTweetText());
 //	       tvAge.setText(tweet.getTimestamp());	TODO
 //	       ivIcon.setImageBitmap(bm); // TODO
