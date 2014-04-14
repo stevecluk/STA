@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    
+    <ImageView android:id="@+id/tweet_icon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/ic_launcher"
+       android:layout_centerVertical="true"
+       android:layout_alignParentRight="true"
+       android:paddingLeft="10dp"/>
+
+    <TextView android:id="@+id/handle" 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:paddingBottom="10dp"
+       android:textAppearance="@android:style/TextAppearance.Holo.Large"
+       android:textColor="@color/list_main"
+       android:layout_toLeftOf="@id/tweet_icon"
+       android:layout_alignParentLeft="true"
+       android:text="Test"/>
+    
+    <TextView android:id="@+id/tweet"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/handle"
+       android:paddingBottom="10dp"
+       android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+       android:textColor="@color/list_main"
+       android:layout_toLeftOf="@id/tweet_icon"
+       android:layout_alignParentLeft="true"
+       android:text="#Test"/>
+    
+    <TextView android:id="@+id/tweet_age"
+        android:layout_below="@id/tweet"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textAppearance="@android:style/TextAppearance.Holo.Small"
+       android:textColor="@color/list_age"
+       android:layout_toLeftOf="@id/tweet_icon"
+       android:layout_alignParentLeft="true"
+       android:text="#Test"
+        />
+    
+
+</RelativeLayout>
