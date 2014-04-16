@@ -14,6 +14,7 @@ import twitter4j.auth.OAuth2Token;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
+import com.steveclifton.sentimentaltwitterandroid.R;
 import com.steveclifton.sentimentaltwitterandroid.StaApplication;
 import com.steveclifton.sentimentaltwitterandroid.model.Tweet;
 
@@ -99,8 +100,11 @@ public class TwitterManager {
 
 			protected ArrayList<Tweet> doInBackground(String... params) {
 				ArrayList<Tweet> ret = new ArrayList<Tweet>();
-				try {					
+				try {				
+					int maxTweets = StaApplication.getContext().getResources().getInteger(R.integer.max_tweets);
 					Query q = new Query(aQueryTerm);
+					q.setLang("en");					
+					q.setCount(maxTweets);	// Max number of tweets to request
 					QueryResult result = twitter.search(q);
 					List<twitter4j.Status> statuses = result.getTweets();
 					for ( twitter4j.Status stat : statuses ) {
@@ -123,5 +127,12 @@ public class TwitterManager {
 		};
 		Op task = new Op();
 		task.execute(new String[]{aQueryTerm});
-	}	
+	}
+	
+
+	
+	
+
+	
+	
 }
