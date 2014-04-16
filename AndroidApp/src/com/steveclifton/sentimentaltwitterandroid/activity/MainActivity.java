@@ -38,7 +38,9 @@ public class MainActivity extends Activity implements QueryResponseListener, Sen
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_main);
+		
 		
 		mEdit = (EditText) findViewById(R.id.edit_searchterm);
 		mEdit.addTextChangedListener( mTextWatcher );

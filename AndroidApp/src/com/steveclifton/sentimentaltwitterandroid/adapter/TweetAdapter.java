@@ -38,7 +38,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 	       ImageView ivIcon = (ImageView) convertView.findViewById(R.id.tweet_icon);
 	       
 	       // Set the strings on the view
-	       tvHandle.setText(tweet.getScreenName());
+	       tvHandle.setText("@"+tweet.getScreenName());
 	       tvTweet.setText(tweet.getTweetText());	  
 	       tvAge.setText(getTweetAge(tweet));
 	       
@@ -75,7 +75,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 		} else if ( Math.abs(diffMs) < PERIOD_DAY )  {
 			ret = StaApplication.getContext().getResources().getString(R.string.period_h_ago, diffMs/PERIOD_HOUR);
 		} else {
-			String format = "HH:mm dd-MM-yyyy";
+			String format = StaApplication.getContext().getResources().getString(R.string.period_date);
 			SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.US);
 			ret = sdf.format(new Date(tweet.getTimestamp()));
 		}

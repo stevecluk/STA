@@ -18,6 +18,7 @@
     <string name="period_s_ago">%ss ago</string>
     <string name="period_m_ago">%sm ago</string>
     <string name="period_h_ago">%sh ago</string>
+    <string name="period_date">HH:mm\' on \'dd-MM-yyyy</string>
        
     <!-- NOTE: Put your MaShape API key here -->
     <!-- Given MaShape charge per API-request, drop max_tweets to 3 or so if enter a valid key -->
