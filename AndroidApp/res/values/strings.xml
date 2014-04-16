@@ -9,6 +9,9 @@
     <string name="main_title">Test</string>
     <string name="search_tweets">Search tweets</string>
     <string name="submit">Submit</string>
+    
+    <string name="search_tweets_msg">Getting search results</string>
+    <string name="sentiment_tweets_msg">Checking sentiments</string>
 
     <!-- List view strings -->
     <string name="list_title">Tweets</string>
@@ -19,5 +22,5 @@
     <!-- NOTE: Put your MaShape API key here -->
     <!-- Given MaShape charge per API-request, drop max_tweets to 3 or so if enter a valid key -->
     <string name="mashape_key"></string> <!--  -->
-    <item type="integer" name="max_tweets">100</item>
+    <item type="integer" name="max_tweets">10</item>
 </resources>
